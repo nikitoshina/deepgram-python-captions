@@ -18,6 +18,8 @@ The converter takes in a JSON object response (see examples in the `./test` fold
 
 You provide the JSON object; then select the converter needed such as `DeepgramConverter`, `WhisperTimestampedConverter`, `AssemblyAIConverter` and so on. (If the API you want to use is not supported, please reach out to `devrel@deepgram.com` and we will do our best to add it.)
 
+> When using the Python SDK, the output you receive might be in the form of a JSON string. To work with this data in Python as a dictionary or a list, you'll need to convert it from a JSON string to a Python object. You can do this using the `json.loads()` function from Python's built-in `json` module. Simply pass the JSON string (in this case, `model_output`) to `json.loads(model_output)`.
+
 ## WebVTT from Deepgram Transcriptions
 
 ```python
